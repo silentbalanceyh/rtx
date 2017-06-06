@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.rtx</groupId>
+	<artifactId>rtx-minu</artifactId>
+    <packaging>pom</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>( POM ) Runtime of Tradeshift</name>
+	<modules>
+	<module>rtx-noir</module>
+	<module>rtx-zut</module>
+	</modules>
+	<properties>
+		<!-- Default Properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<!-- ========== Spring Framework =================== -->
+		<!-- Spring Boot Version -->
+		<spring.boot.version>1.5.2.RELEASE</spring.boot.version>
+		<!-- Spring Framework -->
+		<spring.version>4.3.8.RELEASE</spring.version>
+
+		<!-- AOP Alliance -->
+		<aopalliance.version>1.0</aopalliance.version>
+		<!-- AspectJ Tools -->
+		<aspectj.version>1.8.10</aspectj.version>
+		<!-- PgSql JDBC -->
+		<jdbc.pgsql.version>9.4.1212</jdbc.pgsql.version>
+
+		<!-- ========== Object Validation ================== -->
+		<!-- Oval -->
+		<oval.version>1.87</oval.version>
+		<!-- Apache Groovy -->
+		<oval.groovy>2.4.7</oval.groovy>
+		<!-- Joda time -->
+		<joda.version>2.9.9</joda.version>
+		<!-- Jackson Core -->
+		<jackson.version>2.8.8</jackson.version>
+		<!-- HK2 to bind interface -->
+		<hk2.version>2.5.0-b32</hk2.version>
+		<!-- Asm Version -->
+		<asm.version>5.1</asm.version>
+
+		<!-- ========== SLF4j Version ====================== -->
+		<!-- SLF4j Api -->
+		<!-- http://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<slf4j.version>1.7.21</slf4j.version>
+
+		<!-- LOG4j -->
+		<!-- http://mvnrepository.com/artifact/log4j/log4j -->
+		<log4j.version>1.2.17</log4j.version>
+
+		<!-- ========== Tradeshift Api ====================== -->
+		<jersey.version>1.2</jersey.version>
+
+		<!-- ======================= Test =================== -->
+		<!-- Java Unit Testing -->
+		<junit.version>4.12</junit.version>
+		<!-- Mockito Testing -->
+		<mockito.version>1.9.5</mockito.version>
+		<!-- ======================= Plugins ========================== -->
+		<!-- Mojo's AspectJ Maven Plugin -->
+		<maven.mojo.aspectj.version>1.9</maven.mojo.aspectj.version>
+		<!-- Mojo version -->
+		<maven.plugin.mojo.version>2.3</maven.plugin.mojo.version>
+		<!-- Docker Maven Plugin -->
+		<maven.plugin.docker.version>0.4.11</maven.plugin.docker.version>
+		<!-- Jacoco Maven Plugin -->
+		<maven.plugin.jacoco.version>0.7.9</maven.plugin.jacoco.version>
+		<!-- JUnit plugin for testing -->
+		<maven.plugin.surface.version>2.20</maven.plugin.surface.version>
+	</properties>
+	<dependencies>
+		<!-- JUnit Version -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Mockito -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
+		<!-- Joda Time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+		</dependency>
+		<!-- AspectJ Runtime -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+		</dependency>
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<!-- Object Validation: Oval for code quality -->
+		<dependency>
+			<groupId>net.sf.oval</groupId>
+			<artifactId>oval</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+		</dependency>
+		<!-- Slf4j Version -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<!-- Manage dependency version to avoid jar conflicts -->
+		<dependencies>
+			<!-- Tradeshift Project Reference -->
+			<dependency>
+				<groupId>org.lg</groupId>
+				<artifactId>lg-core-connector</artifactId>
+				<version>${project.parent.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.lg</groupId>
+				<artifactId>lg-core-datum</artifactId>
+				<version>${project.parent.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.lg</groupId>
+				<artifactId>lg-core-hors</artifactId>
+				<version>${project.parent.version}</version>
+			</dependency>
+			<!-- Tradeshift Restful -->
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-json</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
+				<artifactId>oauth-client</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
+				<artifactId>oauth-signature</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<!-- Joda Time Library -->
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda.version}</version>
+			</dependency>
+			<!-- Slf4j Version -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<!-- Spring Version -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<!-- Jackson Version -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>aopalliance</groupId>
+				<artifactId>aopalliance</artifactId>
+				<version>${aopalliance.version}</version>
+			</dependency>
+			<!-- Mockito -->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${mockito.version}</version>
+			</dependency>
+			<!-- Asm Version -->
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${asm.version}</version>
+			</dependency>
+			<!-- Groovy -->
+			<dependency>
+				<groupId>org.codehaus.groovy</groupId>
+				<artifactId>groovy-all</artifactId>
+				<version>${oval.groovy}</version>
+			</dependency>
+			<!-- Oval -->
+			<dependency>
+				<groupId>net.sf.oval</groupId>
+				<artifactId>oval</artifactId>
+				<version>${oval.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<!-- AspectJ to enable AOP -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${maven.plugin.jacoco.version}</version>
+				<configuration>
+					<includes>com.ts.*</includes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- AJDT Compile -->
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>aspectj-maven-plugin</artifactId> 
+				<version>${maven.mojo.aspectj.version}</version> <dependencies> <dependency> 
+				<groupId>org.aspectj</groupId> <artifactId>aspectjrt</artifactId> <version>${aspectj.version}</version> 
+				</dependency> <dependency> <groupId>org.aspectj</groupId> <artifactId>aspectjtools</artifactId> 
+				<version>${aspectj.version}</version> </dependency> </dependencies> <configuration> 
+				<complianceLevel>${java.version}</complianceLevel> <source>${java.version}</source> 
+				<target>${java.version}</target> <Xlint>ignore</Xlint> <weaveWithAspectsInMainSourceFolder>true</weaveWithAspectsInMainSourceFolder> 
+				</configuration> <executions> <execution> <id>compile</id> <configuration> 
+				<ajdtBuildDefFile>src/main/resources/aj/aop.properties</ajdtBuildDefFile> 
+				</configuration> <goals> <goal>compile</goal> </goals> </execution> <execution> 
+				<id>test-compile</id> <configuration> <ajdtBuildDefFile>src/main/resources/aj/aop-test.properties</ajdtBuildDefFile> 
+				</configuration> <goals> <goal>test-compile</goal> </goals> </execution> 
+				</executions> </plugin> -->
+		</plugins>
+	</build>
+</project>
+
+
+
+
+
+
+
