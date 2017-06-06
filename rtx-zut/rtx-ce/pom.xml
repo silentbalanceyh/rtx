@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>rtx-ce</artifactId>
-  <name>Runtime of Data Model</name>
+  <name> rtx-ce     Runtime of Data Model</name>
 </project>

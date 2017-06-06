@@ -10,12 +10,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.rtx</groupId>
 	<artifactId>rtx-minu</artifactId>
-    <packaging>pom</packaging>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>( POM ) Runtime of Tradeshift</name>
+	<name> rtx-minu   ( ROOT ) Runtime of Tradeshift</name>
 	<modules>
-	<module>rtx-noir</module>
-	<module>rtx-zut</module>
+		<module>rtx-noir</module>
+		<module>rtx-zut</module>
+		<module>rtx-fixor</module>
+		<module>rtx-xor</module>
+		<module>rtx-norm</module>
 	</modules>
 	<properties>
 		<!-- Default Properties -->
@@ -25,7 +28,7 @@
 
 		<!-- ========== Spring Framework =================== -->
 		<!-- Spring Boot Version -->
-		<spring.boot.version>1.5.2.RELEASE</spring.boot.version>
+		<spring.boot.version>1.5.3.RELEASE</spring.boot.version>
 		<!-- Spring Framework -->
 		<spring.version>4.3.8.RELEASE</spring.version>
 

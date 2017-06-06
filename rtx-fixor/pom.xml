@@ -5,12 +5,7 @@
     <artifactId>rtx-minu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>rtx-zut</artifactId>
+  <artifactId>rtx-fixor</artifactId>
   <packaging>pom</packaging>
-  <name> rtx-zut    ( POM ) Runtime of Environment</name>
-  <modules>
-  	<module>rtx-nut</module>
-  	<module>rtx-ce</module>
-  	<module>rtx-fet</module>
-  </modules>
+  <name> rtx-fixor  ( POM ) Runtime of Raccordement Arch</name>
 </project>

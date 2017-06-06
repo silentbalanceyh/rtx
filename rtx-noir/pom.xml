@@ -7,7 +7,7 @@
   </parent>
   <artifactId>rtx-noir</artifactId>
   <packaging>pom</packaging>
-  <name>( POM ) Runtime of Integration</name>
+  <name> rtx-noir   ( POM ) Runtime of Integration</name>
   <modules>
   	<module>rtx-bel</module>
   	<module>rtx-ts</module>

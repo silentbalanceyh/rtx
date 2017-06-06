@@ -6,5 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>rtx-nut</artifactId>
-  <name>Runtime of Core Library</name>
+  <name> rtx-nut    Runtime of Core Library</name>
 </project>
