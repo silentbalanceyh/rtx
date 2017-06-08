@@ -1,0 +1,78 @@
+<Ticket>
+	<PeriodGroup value="">
+		<SupplierGroup value="">
+			<Period>
+				<Raw></Raw>
+				<Start></Start>
+				<End></End>
+			</Period>
+			<Buyer>
+				<TaxID></TaxID>
+			</Buyer>
+			<Supplier>
+				<ID></ID>
+				<TaxID></TaxID>
+			</Supplier>
+			<Metadata>
+				<ID></ID>
+				<IssueDate></IssueDate>
+			</Metadata>
+			<Items count="">
+				<Item>
+					<!-- Shared -->
+					<GuaZhangID></GuaZhangID>
+					<ComponentCode></ComponentCode>
+					<ComponentName></ComponentName>
+					<Unit></Unit>
+					<Price></Price>
+					<Amount></Amount>
+					<Type></Type>
+					<Comment></Comment>
+					<!-- GuaZhang -->
+					<BalanceOfMonth></BalanceOfMonth>
+					<BalanceOfLastMonth></BalanceOfLastMonth>
+					<PurcahseOfMonth></PurcahseOfMonth>
+					<ReturnQualified></ReturnQualified>
+					<ReturnNonQualified></ReturnNonQualified>
+					<GuaZhangNumber></GuaZhangNumber>
+					<Confirmed></Confirmed>
+					<ConfirmNotes></ConfirmNotes>
+					<!-- Abc -->
+					<ClaimNumber></ClaimNumber>
+					<ClaimMultiple></ClaimMultiple>
+					<PriceReductionRadio></PriceReductionRadio>
+					<!-- Report for UBL -->
+					<IsNegative></IsNegative>
+					<PriceLess></PriceLess>
+				</Item>
+				<Item>
+					<!-- Shared -->
+					<GuaZhangID></GuaZhangID>
+					<ComponentCode></ComponentCode>
+					<ComponentName></ComponentName>
+					<Unit></Unit>
+					<Price></Price>
+					<Amount></Amount>
+					<Type></Type>
+					<Comment></Comment>
+					<!-- GuaZhang -->
+					<BalanceOfMonth></BalanceOfMonth>
+					<BalanceOfLastMonth></BalanceOfLastMonth>
+					<PurcahseOfMonth></PurcahseOfMonth>
+					<ReturnQualified></ReturnQualified>
+					<ReturnNonQualified></ReturnNonQualified>
+					<GuaZhangNumber></GuaZhangNumber>
+					<Confirmed></Confirmed>
+					<ConfirmNotes></ConfirmNotes>
+					<!-- Abc -->
+					<ClaimNumber></ClaimNumber>
+					<ClaimMultiple></ClaimMultiple>
+					<PriceReductionRadio></PriceReductionRadio>
+					<!-- Report for UBL -->
+					<IsNegative></IsNegative>
+					<PriceLess></PriceLess>
+				</Item>
+			</Items>
+		</SupplierGroup>
+	</PeriodGroup>
+</Ticket>

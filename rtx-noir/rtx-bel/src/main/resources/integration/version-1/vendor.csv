@@ -1,0 +1,5 @@
+PartnerName,PartnerID,TaxID,PartnerCategory
+Supplier 1,100015,100015A,Supplier
+Supplier 2,100016,100016A,Supplier
+Buyer 1,100017,100017A,Buyer
+Buyer 2,100018,100018A,Buyer
